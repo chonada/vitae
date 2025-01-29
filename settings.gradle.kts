@@ -23,3 +23,4 @@ rootProject.name = "Vitae"
 include(":app")
 include(":domain")
 include(":data")
+include(":common")

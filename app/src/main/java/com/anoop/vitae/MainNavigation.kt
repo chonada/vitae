@@ -8,13 +8,16 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.anoop.vitae.ui.screens.ResumeScreen
+import com.anoop.vitae.ui.screens.ResumeViewModel
 
 @Composable
 fun MainNavigation() {
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = "main") {
-        composable("main") { ResumeScreen(modifier = Modifier.padding(16.dp)) }
+        composable("main") {
+            ResumeScreen(modifier = Modifier.padding(16.dp))
+        }
         // TODO: Add more destinations
     }
 }
