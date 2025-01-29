@@ -29,7 +29,8 @@ object DataToDomainMapper {
             name = checkNotNull(basicsData.name),
             phone = checkNotNull(basicsData.phone),
             profiles = checkNotNull(basicsData.profiles).map { mapProfileDataToDomain(it) },
-            summary = checkNotNull(basicsData.summary)
+            summary = checkNotNull(basicsData.summary),
+            email = checkNotNull(basicsData.email)
         )
     }
 

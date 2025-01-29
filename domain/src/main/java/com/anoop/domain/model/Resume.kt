@@ -1,7 +1,7 @@
 package com.anoop.domain.model
 
 data class Resume(
-    val basics: Basics? = null,
+    val basics: Basics,
     val education: List<Education>,
     val languages: List<Language>,
     val references: List<Reference>,

@@ -5,6 +5,7 @@ data class Basics(
     val location: Location,
     val name: String,
     val phone: String,
+    val email: String,
     val profiles: List<Profile>,
     val summary: String
 )

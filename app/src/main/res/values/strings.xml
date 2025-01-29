@@ -5,4 +5,10 @@
     <string name="resume">Resume</string>
     <string name="error">It looks like something went wrong. Please try again later.</string>
     <string name="error_title">Error</string>
+    <string name="navigate_up">Up</string>
+    <string name="address_sub">%1s - %2s, %3s</string>
+    <string name="work_position">Role :</string>
+    <string name="dates_range">From %1s until %2s</string>
+    <string name="area">Specialization :</string>
+    <string name="references">References</string>
 </resources>

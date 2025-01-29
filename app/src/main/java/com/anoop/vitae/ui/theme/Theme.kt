@@ -1,8 +1,8 @@
 package com.anoop.vitae.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -11,6 +11,7 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.material3.Typography
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -51,7 +52,19 @@ fun VitaeTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = VitaeTypography,
         content = content
     )
+}
+
+object VitaeTheme {
+    val colorScheme: ColorScheme
+        @Composable
+        get() = MaterialTheme.colorScheme
+    val dimensions: Dimensions
+    @Composable
+        get() = LocalDimensions.current
+    val typography: Typography
+        @Composable
+        get() = VitaeTypography
 }
