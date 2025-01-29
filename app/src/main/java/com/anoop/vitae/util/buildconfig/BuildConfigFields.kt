@@ -1,4 +1,4 @@
-package com.anoop.common.buildconfig
+package com.anoop.vitae.util.buildconfig
 
 data class BuildConfigFields(
     val buildType: String,

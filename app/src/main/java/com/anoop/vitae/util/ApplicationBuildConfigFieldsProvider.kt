@@ -1,7 +1,7 @@
 package com.anoop.vitae.util
 
-import com.anoop.common.buildconfig.BuildConfigFields
-import com.anoop.common.buildconfig.BuildConfigFieldsProvider
+import com.anoop.vitae.util.buildconfig.BuildConfigFields
+import com.anoop.vitae.util.buildconfig.BuildConfigFieldsProvider
 import com.anoop.vitae.BuildConfig
 import javax.inject.Inject
 

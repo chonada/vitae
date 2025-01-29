@@ -1,6 +1,5 @@
 package com.anoop.data.di
 
-import com.anoop.common.buildconfig.BuildConfigFieldsProvider
 import com.anoop.data.respository.ResumeRepository
 import com.anoop.data.respository.ResumeRepositoryImpl
 import dagger.Binds
@@ -16,7 +15,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-interface DataModule {
+internal object DataModule {
 
     @Provides
     @Singleton
@@ -26,16 +25,8 @@ interface DataModule {
 
     @Provides
     @Singleton
-    fun okHttpCallFactory(
-        buildConfigFieldsProvider: BuildConfigFieldsProvider
-    ): Call.Factory = OkHttpClient.Builder()
-        .addInterceptor(
-            HttpLoggingInterceptor()
-                .apply {
-                    if (buildConfigFieldsProvider.get().buildType == "debug") {
-                        setLevel(HttpLoggingInterceptor.Level.BODY)
-                    }
-                },
-        )
+    fun okHttpCallFactory(): Call.Factory = OkHttpClient.Builder()
+        .addInterceptor(HttpLoggingInterceptor()
+            .apply { setLevel(HttpLoggingInterceptor.Level.BODY) })
         .build()
 }

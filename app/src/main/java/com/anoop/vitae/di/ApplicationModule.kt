@@ -1,6 +1,6 @@
 package com.anoop.vitae.di
 
-import com.anoop.common.buildconfig.BuildConfigFieldsProvider
+import com.anoop.vitae.util.buildconfig.BuildConfigFieldsProvider
 import com.anoop.vitae.util.ApplicationBuildConfigFieldsProvider
 import dagger.Module
 import dagger.Provides
@@ -9,7 +9,7 @@ import dagger.hilt.components.SingletonComponent
 
 @Module
 @InstallIn(SingletonComponent::class)
-interface ApplicationModule {
+internal object ApplicationModule {
     @Provides
     fun provideBuildConfigFieldsProvider(
         buildConfigFieldsProvider: ApplicationBuildConfigFieldsProvider
