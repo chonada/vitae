@@ -1,4 +1,4 @@
-package com.anoop.vitae.util.buildconfig
+package com.anoop.common.buildconfig
 
 interface BuildConfigFieldsProvider {
 

@@ -1,5 +1,6 @@
 package com.anoop.data.service
 
+import com.anoop.common.buildconfig.BuildConfigFieldsProvider
 import com.anoop.data.datasource.ResumeDataSource
 import com.anoop.data.model.ResumeData
 import kotlinx.serialization.json.Json
@@ -15,7 +16,7 @@ private const val BASE_URL = "https://www.anoopc.com/"
 @Singleton
 class ResumeService @Inject constructor(
     networkJson: Json,
-    okhttpCallFactory: dagger.Lazy<Call.Factory>,
+    okhttpCallFactory: dagger.Lazy<Call.Factory>
 ): ResumeDataSource {
     private val api: ResumeAPI = Retrofit.Builder()
         .baseUrl(BASE_URL)

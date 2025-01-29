@@ -1,6 +1,6 @@
 package com.anoop.vitae.di
 
-import com.anoop.vitae.util.buildconfig.BuildConfigFieldsProvider
+import com.anoop.common.buildconfig.BuildConfigFieldsProvider
 import com.anoop.vitae.util.ApplicationBuildConfigFieldsProvider
 import dagger.Module
 import dagger.Provides

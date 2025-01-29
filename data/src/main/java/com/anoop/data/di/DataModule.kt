@@ -1,8 +1,6 @@
 package com.anoop.data.di
 
-import com.anoop.data.respository.ResumeRepository
-import com.anoop.data.respository.ResumeRepositoryImpl
-import dagger.Binds
+import com.anoop.common.buildconfig.BuildConfigFieldsProvider
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -25,8 +23,15 @@ internal object DataModule {
 
     @Provides
     @Singleton
-    fun okHttpCallFactory(): Call.Factory = OkHttpClient.Builder()
+    fun okHttpCallFactory(
+        buildConfigFieldsProvider: BuildConfigFieldsProvider
+    ): Call.Factory = OkHttpClient.Builder()
         .addInterceptor(HttpLoggingInterceptor()
-            .apply { setLevel(HttpLoggingInterceptor.Level.BODY) })
+            .apply {
+                if (buildConfigFieldsProvider.get().buildType == "debug") {
+                    setLevel(HttpLoggingInterceptor.Level.BODY)
+                }
+            }
+        )
         .build()
 }

@@ -4,5 +4,6 @@ data class Location(
     val countryCode: String,
     val postalCode: String,
     val address: String,
-    val city: String
+    val city: String,
+    val state: String,
 )

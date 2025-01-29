@@ -39,6 +39,7 @@ object DataToDomainMapper {
             city = checkNotNull(locationData.city),
             countryCode = checkNotNull(locationData.countryCode),
             postalCode = checkNotNull(locationData.postalCode),
+            state = checkNotNull(locationData.state)
         )
     }
 

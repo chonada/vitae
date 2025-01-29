@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Vitae</string>
+    <string name="main_title">%s\'s Resume</string>>
+    <string name="loading">Loading…</string>
+    <string name="resume">Resume</string>
+    <string name="error">It looks like something went wrong. Please try again later.</string>
+    <string name="error_title">Error</string>
 </resources>
